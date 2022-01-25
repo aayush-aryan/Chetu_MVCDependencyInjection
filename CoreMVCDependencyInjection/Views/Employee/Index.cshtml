@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CoreMVCDependencyInjection.Models.Employee>
+
+<a asp-action="Create" asp-controller="Employee">Create</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Email</td>
+            <td>@emp.Gender</td>
+        </tr>
+    }
+</table>
